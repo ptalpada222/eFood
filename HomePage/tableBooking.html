@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Booking</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CDN link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script src="../js/tableBooking.js"></script>
+    <style>
+      /* Centering the card vertically and horizontally */
+      body {
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        /* font-family: "Open Sans", sans-serif; */
+        height: 100vh;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        }
+
+
+      /* Card container */
+      .card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        /* padding: 10px; */
+      }
+
+      .card {
+        display: flex;
+        flex-direction: row;
+        border: none;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+        width: 100%;
+        max-width: 1000px;
+      }
+
+      .card img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px 0 0 10px;
+      }
+
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* padding: 1.2rem; */
+        background-color: #fff;
+        border-radius: 0 10px 10px 0;
+      }
+
+      .card-title {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      /* Form styles */
+      .form-container {
+        width: 100%;
+        max-width: 450px;
+      }
+
+      .form-container h1 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        color: #ffbe33;
+        text-align: center;
+      }
+
+      .form-container label {
+        font-size: 0.8rem;
+        /* margin-bottom: 5px; */
+        color: #555;
+      }
+      button
+      {
+        margin-top: 1rem;
+      }
+      .form-container input,
+      .form-container select,
+      .form-container button {
+        width: 100%;
+        /* margin-bottom: 15px; */
+        border-radius: 5px;
+        border: 1px solid #ddd;
+      }
+
+      .form-container button {
+        background-color: #ffbe33;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      .form-container button:hover {
+        background-color: #e0a829;
+      }
+
+      .links {
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+      }
+
+      .links a {
+        color: #ffbe33;
+        text-decoration: none;
+      }
+
+      .links a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .card {
+          flex-direction: column;
+        }
+        .card img {
+          width: 100%;
+          border-radius: 10px;
+        }
+        .form-container {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main_area position-relative pb-4" style="background-color: rgb(34, 34, 34);">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg container">
+        <div class="container-fluid">
+          <!-- Left-aligned Logo and Home Link -->
+          <h4 class="logo text-white me-3">E-food</h4>
+          <!-- <a class="nav-link text-white me-auto" href="#">Home</a> -->
+
+          <!-- Right-aligned Navbar items -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Navbar items pushed to the right -->
+            <ul class="navbar-nav ms-auto text-uppercase">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./About.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./menu.html">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./tableBooking.html"
+                  >Table Booking</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="../HomePage/contact.html"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+
+            <!-- Right-side Icons and Button -->
+            <div class="d-flex align-items-center">
+              <a href="../Login&SignUp/login.html" class="px-2 mx-1 text-white">
+                <i class="fa-solid fa-user"></i>
+              </a>
+              <button class="buttons mx-4">
+                <a href="./menu.html" class="nav-link text-white px-3 py-1"
+                  >Order Online</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      </div>
+    </div>
+    
+    <!-- Card Container -->
+    <div class="card-container">
+      <div class="card">
+        <!-- Image Section -->
+        <div class="col-md-6">
+          <img
+            src="images/restaurant-dining-table-set.jpg"
+            class="img-fluid rounded-start"
+            alt="Restaurant Dining Table"
+          />
+        </div>
+
+        <!-- Form Section -->
+        <div class="col-md-6">
+          <div class="card-body">
+            <div class="form-container">
+              <h1>TABLE BOOKING FORM</h1>
+              <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone" required />
+
+                <label for="tableNumber">Table Number</label>
+                <select id="tableNumber" name="tableNumber">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                </select>
+
+                <label for="booking-date">Booking Date</label>
+                <input type="date" id="booking-date" name="booking-date" required />
+
+                <label for="startTime">Start Time</label>
+                <input type="time" id="startTime" name="startTime" required />
+
+                <label for="endTime">End Time</label>
+                <input type="time" id="endTime" name="endTime" required />
+
+                <label for="adults">Number of Customers</label>
+                <select id="adults" name="adults">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                <button type="submit">RESERVE A TABLE</button>
+                <div class="links">
+                  <a href="#">Check Table Avalability ?</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Container -->
+<div aria-live="polite" aria-atomic="true" class="position-fixed top-0 end-0 p-3" style="z-index: 1055;">
+  <div id="customToast" class="toast align-items-center text-white bg-primary border-0" role="alert">
+    <div class="d-flex">
+      <div class="toast-body" id="toastMessage">
+        <!-- Message goes here -->
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+    </div>
+  </div>
+</div>
+
+    <!-- Footer start -->
+    <footer class="footer_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 footer-col">
+            <div class="footer_contact">
+              <h4>Contact Us</h4>
+              <div class="contact_link_box">
+                <a href="#" class="text-decoration-none">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  <span> Bhavnagar </span>
+                </a>
+                <a href="#" class="text-decoration-none">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <span> Call +91 1234567890 </span>
+                </a>
+                <a href="#" class="text-decoration-none">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <span> efood@gmail.com </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 footer-col">
+            <div class="footer_detail">
+              <a
+                href="../HomePage/index.html"
+                class="footer-logo text-decoration-none"
+              >
+                E-food
+              </a>
+              <p>
+                Good food is the foundation of genuine happiness. We bring joy to your doorstep 
+                with delicious meals made with love and the freshest ingredients.
+              </p>
+              <div class="footer_social">
+                <a href="#" class="text-decoration-none">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="text-decoration-none">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="text-decoration-none">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="text-decoration-none">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="text-decoration-none">
+                  <i class="fa fa-pinterest" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 footer-col">
+            <h4>Opening Hours</h4>
+            <p>Everyday</p>
+            <p>10.00 Am -10.00 Pm</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end here -->
+     
+    <!-- Bootstrap JS and other scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome link -->
+    <script
+      src="https://kit.fontawesome.com/e7ac73f28f.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<div class="p-4">
+  <!-- Page Header -->
+  <h2 class="text-2xl font-bold mb-4 text-center md:text-left">
+    🍽️ Manage Dishes
+  </h2>
+
+  <!-- Add Dish Form -->
+  <div class="bg-white p-4 rounded shadow mb-6">
+    <h3 class="text-lg font-semibold mb-2 text-center md:text-left">
+      ➕ Add New Dish
+    </h3>
+    <form id="dish-form" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <input
+        type="text"
+        id="dish-name"
+        placeholder="Dish Name"
+        class="p-2 border rounded w-full"
+        required
+      />
+      <select id="variety" class="p-2 border rounded w-full" required>
+        <option value="">Select Variety</option>
+        <!-- <option value="Veg">Veg</option>
+        <option value="Non-Veg">Non-Veg</option> -->
+        <option value="Starters">Starters</option>
+        <option value="Main Course">Main Course</option>
+        <option value="Desserts">Desserts</option>
+        <option value="Beverages">Beverages</option>
+      </select>
+      <input
+        type="text"
+        id="price"
+        placeholder="Price"
+        class="p-2 border rounded w-full"
+        required
+      />
+      <input
+        type="file"
+        id="dish-image"
+        class="p-2 border rounded w-full"
+        accept="image/*"
+        required
+      />
+      <button
+        type="submit"
+        class="bg-green-500 text-white px-4 py-2 rounded w-full md:col-span-2 hover:bg-green-600 transition"
+      >
+        ✅ Add Dish
+      </button>
+    </form>
+  </div>
+
+  <!-- Dishes Table -->
+  <div class="bg-white p-4 rounded shadow overflow-x-auto">
+    <h3 class="text-lg font-semibold mb-2 text-center md:text-left">
+      📋 Dish List
+    </h3>
+    <table class="w-full border-collapse">
+      <thead>
+        <tr class="bg-gray-200 text-sm md:text-base">
+          <th class="p-2 border">Image</th>
+          <th class="p-2 border">Dish Name</th>
+          <th class="p-2 border">Variety</th>
+          <th class="p-2 border">Price</th>
+          <th class="p-2 border">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="dishes-table">
+        <tr>
+          <td class="p-2 border text-center" colspan="5">Loading...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

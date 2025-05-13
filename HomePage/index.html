@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>E-food</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles/style.css" />
+    <!-- Table Booking stylesheet -->
+    <link rel="stylesheet" href="../styles/tableBooking.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- owl corousel link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+
+    <!-- wow js library link -->
+    <link rel="stylesheet" href="css/animate.css" />
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="../js/main.js"></script>
+  </head>
+  <body>
+    <!-- Main Content Area -->
+    <!-- service section end here -->
+    <div class="main_area position-relative">
+      <!-- Background Image -->
+      <div class="bg-box">
+        <img src="../HomePage/images/hero-bg.jpg" alt="Background dish image" />
+      </div>
+
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg container p-2">
+        <div class="container-fluid">
+          <!-- Left-aligned Logo and Home Link -->
+          <h4 class="logo text-white me-3">E-food</h4>
+          <!-- <a class="nav-link text-white me-auto" href="#">Home</a> -->
+
+          <!-- Right-aligned Navbar items -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Navbar items pushed to the right -->
+            <ul class="navbar-nav ms-auto text-uppercase">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./About.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./menu.html">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./tableBooking.html"
+                  >Table Booking</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="../HomePage/contact.html"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+
+            <!-- Right-side Icons and Button -->
+            <div class="d-flex align-items-center">
+              <a href="../Login&SignUp/login.html" class="px-2 mx-1 text-white">
+                <i class="fa-solid fa-user"></i>
+              </a>
+              <!-- <a href="#" class="px-2 mx-1 text-white">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </a> -->
+              <!-- <a href="#" class="px-2 mx-1 text-white">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a> -->
+              <button class="buttons mx-4">
+                <a href="./menu.html" class="nav-link text-white px-3 py-1"
+                  >Order Online</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Carousel Slider Section -->
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div
+              class="slider-main-box container text-white d-flex align-items-center justify-content-center"
+            >
+              <div class="text-center">
+                <h2 class="slider-title">Fast Food Restaurant</h2>
+                <p class="slider-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Rerum commodi necessitatibus ut officia illo facere numquam
+                  distinctio.
+                </p>
+                <button class="buttons my-3">
+                  <a href="./menu.html" class="nav-link text-white px-3 py-1"
+                    >Order Online</a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div
+              class="slider-main-box container text-white d-flex align-items-center justify-content-center"
+            >
+              <div class="text-center">
+                <h2 class="slider-title">Delicious Dishes</h2>
+                <p class="slider-text">
+                  Enjoy a variety of delicious dishes prepared with the finest
+                  ingredients.
+                </p>
+                <button class="buttons my-3">
+                  <a href="./menu.html" class="nav-link text-white px-3 py-1"
+                    >View Menu</a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div
+              class="slider-main-box container text-white d-flex align-items-center justify-content-center"
+            >
+              <div class="text-center">
+                <h2 class="slider-title">Book Your Table</h2>
+                <p class="slider-text">
+                  Reserve your table for a delightful dining experience.
+                </p>
+                <button class="buttons my-3">
+                  <a
+                    href="./tableBooking.html"
+                    class="nav-link text-white px-3 py-1"
+                    >Book Now</a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel controls -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <!-- Services section -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <h1
+          class="text-center pb-4"
+          style="font-family: 'Dancing Script', cursive"
+          style="font-family: 'Dancing Script', cursive"
+        >
+          Services
+        </h1>
+      </div>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="service-item rounded pt-3">
+              <div class="p-4">
+                <!-- <i class="fa-solid fa-user" style="color: #ffd421;"></i> -->
+                <i class="fa fa-3x fa-user-tie mb-4" style="color: #ffd421"></i>
+                <h5>Master Chefs</h5>
+                <p>
+                  Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita
+                  amet diam
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="service-item rounded pt-3 service-hover">
+              <div class="p-4">
+                <i class="fa fa-3x fa-utensils mb-4" style="color: #ffd421"></i>
+                <h5>Quality Food</h5>
+                <p>
+                  Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita
+                  amet diam
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="service-item rounded pt-3 service-hover">
+              <div class="p-4">
+                <i
+                  class="fa fa-3x fa-cart-plus mb-4"
+                  style="color: #ffd421"
+                ></i>
+                <h5>Online Order</h5>
+                <p>
+                  Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita
+                  amet diam
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+            <div class="service-item rounded pt-3 service-hover">
+              <div class="p-4">
+                <i class="fa fa-3x fa-headset mb-4" style="color: #ffd421"></i>
+                <h5>24/7 Service</h5>
+                <p>
+                  Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita
+                  amet diam
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="scroll-up-btn" id="scrollUpBtn">&#8679;</button>
+    <!-- offer section start here -->
+    <section class="offer_section layout_padding-bottom">
+      <div class="offer-Heading container text-center">
+        <h2 style="font-family: 'Dancing Script', cursive" class="h1">
+          Specials Offers
+        </h2>
+      </div>
+      <div class="offer_container">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="box">
+                <div class="img-box">
+                  <img src="./images/o1.jpg" alt="" />
+                </div>
+                <div class="detail-box">
+                  <h5>Tasty Thursdays</h5>
+                  <h6><span>20%</span> Off</h6>
+                  <a href="./menu.html" class="text-decoration-none">
+                    Order Now
+                    <svg
+                      version="1.1"
+                      id="Capa_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 456.029 456.029"
+                      style="enable-background: new 0 0 456.029 456.029"
+                      xml:space="preserve"
+                    >
+                      <g>
+                        <g>
+                          <path
+                            d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                       c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z"
+                          />
+                        </g>
+                      </g>
+                      <g>
+                        <g>
+                          <path
+                            d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                       C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                       c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                       C457.728,97.71,450.56,86.958,439.296,84.91z"
+                          />
+                        </g>
+                      </g>
+                      <g>
+                        <g>
+                          <path
+                            d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                       c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z"
+                          />
+                        </g>
+                      </g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="box">
+                <div class="img-box">
+                  <img src="./images/o2.jpg" alt="" />
+                </div>
+                <div class="detail-box">
+                  <h5>Pizza Days</h5>
+                  <h6><span>15%</span> Off</h6>
+                  <a href="./menu.html" class="text-decoration-none">
+                    Order Now
+                    <svg
+                      version="1.1"
+                      id="Capa_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 456.029 456.029"
+                      style="enable-background: new 0 0 456.029 456.029"
+                      xml:space="preserve"
+                    >
+                      <g>
+                        <g>
+                          <path
+                            d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                       c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z"
+                          />
+                        </g>
+                      </g>
+                      <g>
+                        <g>
+                          <path
+                            d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                       C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                       c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                       C457.728,97.71,450.56,86.958,439.296,84.91z"
+                          />
+                        </g>
+                      </g>
+                      <g>
+                        <g>
+                          <path
+                            d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                       c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z"
+                          />
+                        </g>
+                      </g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- offer section here -->
+    <!-- Menu Start -->
+    <div class="only-bg">
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h5
+              class="section-title ff-secondary text-center fw-normal h1"
+              style="font-family: 'Dancing Script', cursive"
+            >
+              <b style="color: #ffbe33">Food Menu</b>
+            </h5>
+            <h1 class="mb-5">Most Popular Items</h1>
+          </div>
+          <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
+            <ul
+              class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5"
+            >
+              <li class="nav-item">
+                <a
+                  class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active"
+                  data-bs-toggle="pill"
+                  href="#tab-1"
+                  style="text-decoration: none"
+                >
+                  <i class="fa fa-coffee fa-2x" style="color: #ffd421"></i>
+                  <div class="ps-3">
+                    <small class="text-body">Popular</small>
+                    <h6 class="mt-n1 mb-0" style="color: #ffbe33">Breakfast</h6>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="d-flex align-items-center text-start mx-3 pb-3"
+                  data-bs-toggle="pill"
+                  href="#tab-2"
+                  style="text-decoration: none"
+                >
+                  <i class="fa fa-hamburger fa-2x" style="color: #ffd421"></i>
+                  <div class="ps-3">
+                    <small class="text-body">Special</small>
+                    <h6 class="mt-n1 mb-0" style="color: #ffbe33">Launch</h6>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="d-flex align-items-center text-start mx-3 me-0 pb-3"
+                  data-bs-toggle="pill"
+                  href="#tab-3"
+                  style="text-decoration: none"
+                >
+                  <i class="fa fa-utensils fa-2x" style="color: #ffd421"></i>
+                  <div class="ps-3">
+                    <small class="text-body">Lovely</small>
+                    <h6 class="mt-n1 mb-0" style="color: #ffbe33">Dinner</h6>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div id="tab-1" class="tab-pane fade show p-0 active">
+                <div class="row g-4">
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="./images/menu-1.jpg"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>Burger</span>
+                          <span class="text-primary">&#8377;115</span>
+                        </h5>
+                        <small class="fst-italic"
+                          >Ipsum ipsum clita erat amet dolor justo diam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="./images/menu-2.jpg"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>Burger</span>
+                          <span class="text-primary">&#8377;115</span>
+                        </h5>
+                        <small class="fst-italic"
+                          >Ipsum ipsum clita erat amet dolor justo diam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="./images/menu-3.jpg"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>Burger</span>
+                          <span class="text-primary">&#8377;115</span>
+                        </h5>
+                        <small class="fst-italic"
+                          >Ipsum ipsum clita erat amet dolor justo diam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="./images/menu-4.jpg"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>Burger</span>
+                          <span class="text-primary">&#8377;115</span>
+                        </h5>
+                        <small class="fst-italic"
+                          >Ipsum ipsum clita erat amet dolor justo diam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="./images/menu-5.jpg"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>Burger</span>
+                          <span class="text-primary">&#8377;115</span>
+                        </h5>
+                        <small class="fst-italic"
+                          >Ipsum ipsum clita erat amet dolor justo diam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="./images/menu-6.jpg"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>Burger</span>
+                          <span class="text-primary">&#8377;115</span>
+                        </h5>
+                        <small class="fst-italic"
+                          >Ipsum ipsum clita erat amet dolor justo diam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="./images/menu-7.jpg"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>Burger</span>
+                          <span class="text-primary">&#8377;115</span>
+                        </h5>
+                        <small class="fst-italic"
+                          >Ipsum ipsum clita erat amet dolor justo diam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="./images/menu-8.jpg"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>Burger</span>
+                          <span class="text-primary">&#8377;115</span>
+                        </h5>
+                        <small class="fst-italic"
+                          >Ipsum ipsum clita erat amet dolor justo diam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="tab-2" class="tab-pane fade show p-0">
+                <div class="row g-4">
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="../HomePage/images/menu-1.jpg"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>Burger</span>
+                          <span class="text-primary">&#8377;115</span>
+                        </h5>
+                        <small class="fst-italic"
+                          >Ipsum ipsum clita erat amet dolor justo diam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="../HomePage/images/menu-2.jpg"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>Burger</span>
+                          <span class="text-primary">&#8377;115</span>
+                        </h5>
+                        <small class="fst-italic"
+                          >Ipsum ipsum clita erat amet dolor justo diam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="../HomePage/images/menu-3.jpg"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>Burger</span>
+                          <span class="text-primary">&#8377;115</span>
+                        </h5>
+                        <small class="fst-italic"
+                          >Ipsum ipsum clita erat amet dolor justo diam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="../HomePage/images/menu-4.jpg"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>Burger</span>
+                          <span class="text-primary">&#8377;115</span>
+                        </h5>
+                        <small class="fst-italic"
+                          >Ipsum ipsum clita erat amet dolor justo diam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="../HomePage/images/menu-5.jpg"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>Burger</span>
+                          <span class="text-primary">&#8377;115</span>
+                        </h5>
+                        <small class="fst-italic"
+                          >Ipsum ipsum clita erat amet dolor justo diam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="../HomePage/images/menu-6.jpg"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>Burger</span>
+                          <span class="text-primary">&#8377;115</span>
+                        </h5>
+                        <small class="fst-italic"
+                          >Ipsum ipsum clita erat amet dolor justo diam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="../HomePage/images/menu-7.jpg"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>Burger</span>
+                          <span class="text-primary">&#8377;115</span>
+                        </h5>
+                        <small class="fst-italic"
+                          >Ipsum ipsum clita erat amet dolor justo diam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="../HomePage/images/menu-8.jpg"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>Burger</span>
+                          <span class="text-primary">&#8377;115</span>
+                        </h5>
+                        <small class="fst-italic"
+                          >Ipsum ipsum clita erat amet dolor justo diam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="tab-3" class="tab-pane fade show p-0">
+                <div class="row g-4">
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="../HomePage/images/menu-1.jpg"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>Burger</span>
+                          <span class="text-primary">&#8377;115</span>
+                        </h5>
+                        <small class="fst-italic"
+                          >Ipsum ipsum clita erat amet dolor justo diam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="../HomePage/images/menu-2.jpg"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>Burger</span>
+                          <span class="text-primary">&#8377;115</span>
+                        </h5>
+                        <small class="fst-italic"
+                          >Ipsum ipsum clita erat amet dolor justo diam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="../HomePage/images/menu-3.jpg"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>Burger</span>
+                          <span class="text-primary">&#8377;115</span>
+                        </h5>
+                        <small class="fst-italic"
+                          >Ipsum ipsum clita erat amet dolor justo diam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="../HomePage/images/menu-4.jpg"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>Burger</span>
+                          <span class="text-primary">&#8377;115</span>
+                        </h5>
+                        <small class="fst-italic"
+                          >Ipsum ipsum clita erat amet dolor justo diam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="../HomePage/images/menu-5.jpg"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>Burger</span>
+                          <span class="text-primary">&#8377;115</span>
+                        </h5>
+                        <small class="fst-italic"
+                          >Ipsum ipsum clita erat amet dolor justo diam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="../HomePage/images/menu-6.jpg"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>Burger</span>
+                          <span class="text-primary">&#8377;115</span>
+                        </h5>
+                        <small class="fst-italic"
+                          >Ipsum ipsum clita erat amet dolor justo diam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="../HomePage/images/menu-7.jpg"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>Burger</span>
+                          <span class="text-primary">&#8377;115</span>
+                        </h5>
+                        <small class="fst-italic"
+                          >Ipsum ipsum clita erat amet dolor justo diam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="flex-shrink-0 img-fluid rounded"
+                        src="../HomePage/images/menu-8.jpg"
+                        alt=""
+                        style="width: 80px"
+                      />
+                      <div class="w-100 d-flex flex-column text-start ps-4">
+                        <h5
+                          class="d-flex justify-content-between border-bottom pb-2"
+                        >
+                          <span>Burger</span>
+                          <span class="text-primary">&#8377;115</span>
+                        </h5>
+                        <small class="fst-italic"
+                          >Ipsum ipsum clita erat amet dolor justo diam</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Menu End -->
+    <!-- Spinner Start -->
+    <div class="spinner-class">
+      <div class="container-xxl p-4">
+        <div class="container">
+          <div class="row align-items-center">
+            <!-- Text and button on the left side -->
+            <div class="col-md-6 text-white">
+              <h2 class="mb-4">Enjoy Our Delicious Meal</h2>
+              <p>
+                Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
+                Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
+                sed stet lorem sit clita duo justo magna dolore erat amet
+              </p>
+              <button class="buttons my-3">
+                <a href="./menu.html" class="nav-link text-white px-3 py-1"
+                  >Order Now</a
+                >
+              </button>
+            </div>
+
+            <!-- Rotating image on the right side -->
+            <div class="col-md-6 text-center">
+              <img
+                src="../HomePage/images/hero.png"
+                `
+                alt="Rotating Image"
+                class="img-fluid rotate-img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Book Table Portion start here -->
+    <div class="d-flex mt-4 mb-4">
+      <div class="container" style="border-radius: 10px 0 0 10px">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="card flex-md-row shadow-sm">
+              <!-- Image Section -->
+              <div class="col-md-6">
+                <img
+                  src="images/restaurant-dining-table-set.jpg"
+                  class="img-fluid object-fit"
+                  alt="Restaurant Dining Table"
+                  style="border-radius: 10px 0 0 10px"
+                />
+              </div>
+
+              <!-- Form Section -->
+              <div class="col-md-6 d-flex align-items-center border">
+                <div class="card-body">
+                  <h3 class="text-center" style="color: #ffbe33">
+                    TABLE BOOKING FORM
+                  </h3>
+                  <hr style="color: #ffbe11" />
+                  <form>
+                    <div class="mb-2">
+                      <label for="name">Name</label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="form-control"
+                        required
+                      />
+                    </div>
+
+                    <div class="mb-2">
+                      <label for="email">Email</label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-control"
+                        required
+                      />
+                    </div>
+
+                    <div class="mb-2">
+                      <label for="phone">Phone Number</label>
+                      <input
+                        type="text"
+                        id="phone"
+                        name="phone"
+                        class="form-control"
+                        required
+                      />
+                    </div>
+                    <div class="mb-2">
+                      <label for="booking-date">Booking Date & Time</label>
+                      <div class="d-flex gap-2">
+                        <input
+                          type="date"
+                          id="booking-date"
+                          name="booking-date"
+                          class="form-control"
+                          required
+                        />
+                        <input
+                          type="time"
+                          id="booking-time"
+                          name="booking-time"
+                          class="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label for="adults">Number of Customers</label>
+                      <select id="adults" name="adults" class="form-select">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
+                    </div>
+
+                    <button type="submit" class="buttons w-100 bold text-white">
+                      RESERVE A TABLE
+                    </button>
+
+                    <div class="links text-center mt-2">
+                      <a href="#" style="color: #ffbe33"
+                        >Check Table Availability?</a
+                      >
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Book Table Portion ending here -->
+    <!-- Team Start -->
+    <div style="background-color: rgb(34, 34, 34)">
+      <div class="container-xxl pt-5 pb-3 text-white">
+        <div class="container">
+          <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h5
+              class="section-title ff-secondary text-center fw-normal h1"
+              style="font-family: 'Dancing Script', cursive"
+            >
+              <b style="color: #ffbe33">Team Members</b>
+            </h5>
+            <h1 class="mb-5">Our Master Chefs</h1>
+          </div>
+          <div class="row g-4">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="team-item text-center rounded overflow-hidden">
+                <div class="rounded-circle overflow-hidden m-4">
+                  <img
+                    class="img-fluid"
+                    src="../HomePage/images/team-1.jpg"
+                    alt=""
+                  />
+                </div>
+                <h5 class="mb-0">Jamie Oliver</h5>
+                <small>Executive chef</small>
+                <div class="d-flex justify-content-center mt-3">
+                  <a class="btn btn-square btn-warning mx-1" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-square btn-warning mx-1" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-square btn-warning mx-1" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="team-item text-center rounded overflow-hidden">
+                <div class="rounded-circle overflow-hidden m-4">
+                  <img
+                    class="img-fluid"
+                    src="../HomePage/images/team-2.jpg"
+                    alt=""
+                  />
+                </div>
+                <h5 class="mb-0">Gordan Ramsay</h5>
+                <small>Fry chef</small>
+                <div class="d-flex justify-content-center mt-3">
+                  <a class="btn btn-square btn-warning mx-1" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-square btn-warning mx-1" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-square btn-warning mx-1" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+              <div class="team-item text-center rounded overflow-hidden">
+                <div class="rounded-circle overflow-hidden m-4">
+                  <img
+                    class="img-fluid"
+                    src="../HomePage/images/team-3.jpg"
+                    alt=""
+                  />
+                </div>
+                <h5 class="mb-0">Sanjay Thumma</h5>
+                <small>Sous chef</small>
+                <div class="d-flex justify-content-center mt-3">
+                  <a class="btn btn-square btn-warning mx-1" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-square btn-warning mx-1" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-square btn-warning mx-1" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+              <div class="team-item text-center rounded overflow-hidden">
+                <div class="rounded-circle overflow-hidden m-4">
+                  <img
+                    class="img-fluid"
+                    src="../HomePage/images/team-4.jpg"
+                    alt=""
+                  />
+                </div>
+                <h5 class="mb-0">Rick Stein</h5>
+                <small>Vegetable chef</small>
+                <div class="d-flex justify-content-center mt-3">
+                  <a class="btn btn-square btn-warning mx-1" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-square btn-warning mx-1" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-square btn-warning mx-1" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Team End -->
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+      <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+          <h5
+            class="section-title ff-secondary text-center fw-normal h1"
+            style="font-family: 'Dancing Script', cursive"
+          >
+            <b style="color: #ffbe33">Testimonial</b>
+          </h5>
+          <h1 class="mb-5">Our Clients Say!!!</h1>
+        </div>
+        <div class="owl-carousel testimonial-carousel">
+          <div class="testimonial-item bg-transparent border rounded p-4">
+            <i class="fa fa-quote-left fa-2x text-warning mb-3"></i>
+            <p>
+              Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor
+              stet amet eirmod eos labore diam
+            </p>
+            <div class="d-flex align-items-center">
+              <img
+                class="img-fluid flex-shrink-0 rounded-circle"
+                src="../HomePage/images/testimonial-1.jpg"
+                style="width: 50px; height: 50px"
+              />
+              <div class="ps-3">
+                <h5 class="mb-1">Priya</h5>
+                <small>Student</small>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item bg-transparent border rounded p-4">
+            <i class="fa fa-quote-left fa-2x text-warning mb-3"></i>
+            <p>
+              Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor
+              stet amet eirmod eos labore diam
+            </p>
+            <div class="d-flex align-items-center">
+              <img
+                class="img-fluid flex-shrink-0 rounded-circle"
+                src="../HomePage/images/testimonial-2.jpg"
+                style="width: 50px; height: 50px"
+              />
+              <div class="ps-3">
+                <h5 class="mb-1">Rahul</h5>
+                <small>Bank Employee</small>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item bg-transparent border rounded p-4">
+            <i class="fa fa-quote-left fa-2x text-warning mb-3"></i>
+            <p>
+              Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor
+              stet amet eirmod eos labore diam
+            </p>
+            <div class="d-flex align-items-center">
+              <img
+                class="img-fluid flex-shrink-0 rounded-circle"
+                src="../HomePage/images/testimonial-3.jpg"
+                style="width: 50px; height: 50px"
+              />
+              <div class="ps-3">
+                <h5 class="mb-1">Riyan</h5>
+                <small>Engineer</small>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item bg-transparent border rounded p-4">
+            <i class="fa fa-quote-left fa-2x text-warning mb-3"></i>
+            <p>
+              Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor
+              stet amet eirmod eos labore diam
+            </p>
+            <div class="d-flex align-items-center">
+              <img
+                class="img-fluid flex-shrink-0 rounded-circle"
+                src="../HomePage/images/testimonial-4.jpg"
+                style="width: 50px; height: 50px"
+              />
+              <div class="ps-3">
+                <h5 class="mb-1">Nancy</h5>
+                <small>Manager</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <!-- Footer start -->
+    <footer class="footer_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 footer-col">
+            <div class="footer_contact">
+              <h4>Contact Us</h4>
+              <div class="contact_link_box">
+                <a href="#" class="text-decoration-none">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  <span> Bhavnagar </span>
+                </a>
+                <a href="#" class="text-decoration-none">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <span> Call +91 1234567890 </span>
+                </a>
+                <a href="#" class="text-decoration-none">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <span> efood@gmail.com </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 footer-col">
+            <div class="footer_detail">
+              <a
+                href="../HomePage/index.html"
+                class="footer-logo text-decoration-none"
+              >
+                E-food
+              </a>
+              <p>
+                Good food is the foundation of genuine happiness. We bring joy
+                to your doorstep with delicious meals made with love and the
+                freshest ingredients.
+              </p>
+              <div class="footer_social">
+                <a href="#" class="text-decoration-none">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="text-decoration-none">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="text-decoration-none">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="text-decoration-none">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="text-decoration-none">
+                  <i class="fa fa-pinterest" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 footer-col">
+            <h4>Opening Hours</h4>
+            <p>Everyday</p>
+            <p>10.00 Am -10.00 Pm</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end here -->
+
+    <!-- Bootstrap JS link-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome link -->
+    <script
+      src="https://kit.fontawesome.com/e7ac73f28f.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- wow js link -->
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <!-- <script src="../js/main.js"></script> -->
+    <!-- own corousel script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".testimonial-carousel").owlCarousel({
+          loop: true,
+          margin: 30,
+          nav: false,
+          dots: true,
+          autoplay: true,
+          autoplayTimeout: 5000,
+          responsive: {
+            0: { items: 1 },
+            768: { items: 2 },
+            992: { items: 3 },
+          },
+        });
+      });
+      // Get the button element
+      const scrollUpBtn = document.getElementById("scrollUpBtn");
+
+      // Show the button when scrolling down
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 200 ||
+          document.documentElement.scrollTop > 200
+        ) {
+          scrollUpBtn.classList.add("show");
+        } else {
+          scrollUpBtn.classList.remove("show");
+        }
+      };
+
+      // Scroll to top when clicking the button
+      scrollUpBtn.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>

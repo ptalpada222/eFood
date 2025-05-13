@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CDN link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script src="../js/contact.js" defer></script>
+    <style>
+      body {
+        /* font-family: Arial, sans-serif; */
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      .contact-us {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: #fff;
+        margin: 50px auto;
+        width: 85%;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-us h2 {
+        color: #ffb03b;
+        margin-bottom: 10px;
+        font-size: 28px;
+        letter-spacing: 1px;
+      }
+
+      .contact-us h3 {
+        color: #2c3e50;
+        margin-bottom: 30px;
+        font-size: 22px;
+        font-weight: normal;
+      }
+
+      .contact-info {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 30px;
+      }
+
+      .info {
+        text-align: center;
+        width: 30%;
+      }
+
+      .info h4 {
+        color: #ffb03b;
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+
+      .info p {
+        color: #2c3e50;
+        font-size: 16px;
+      }
+
+      .info p i {
+        color: #ffb03b;
+        margin-right: 8px;
+      }
+
+      .map-and-form {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 30px;
+        gap: 40px;
+      }
+
+      .map iframe {
+        border: none;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      .form-container {
+        width: 300px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      input,
+      textarea {
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+
+      textarea {
+        height: 120px;
+        resize: none;
+      }
+
+      #btn {
+        padding: 12px;
+        background-color: #ffb03b;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      #btn:hover {
+        background-color: #e69500;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav-sticky">
+      <div class="main_area position-relative pb-4" style="background-color: rgb(34, 34, 34);">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg container">
+          <div class="container-fluid">
+            <!-- Left-aligned Logo and Home Link -->
+            <h4 class="logo text-white me-3">E-food</h4>
+            <!-- <a class="nav-link text-white me-auto" href="#">Home</a> -->
+  
+            <!-- Right-aligned Navbar items -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <!-- Navbar items pushed to the right -->
+              <ul class="navbar-nav ms-auto text-uppercase">
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="./About.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="./menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="./tableBooking.html"
+                    >Table Booking</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="../HomePage/contact.html"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+  
+              <!-- Right-side Icons and Button -->
+              <div class="d-flex align-items-center">
+                <a href="../Login&SignUp/login.html" class="px-2 mx-1 text-white">
+                  <i class="fa-solid fa-user"></i>
+                </a>
+                <!-- <a href="#" class="px-2 mx-1 text-white">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </a> -->
+                <!-- <a href="#" class="px-2 mx-1 text-white">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </a> -->
+                <button class="buttons mx-4">
+                  <a href="./menu.html" class="nav-link text-white px-3 py-1"
+                    >Order Online</a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </nav>
+        </div>
+      </div>
+    </div>
+    <section class="contact-us">
+      <h2>Contact Us</h2>
+      <h3>Contact For Any Query</h3>
+
+      <div class="contact-info">
+        <div class="info">
+          <h4>Booking</h4>
+          <p><i class="fas fa-envelope"></i> book@efood.com</p>
+        </div>
+        <div class="info">
+          <h4>General</h4>
+          <p><i class="fas fa-envelope"></i> info@efood.com</p>
+        </div>
+        <div class="info">
+          <h4>Technical</h4>
+          <p><i class="fas fa-envelope"></i> tech@efood.com</p>
+        </div>
+      </div>
+
+      <div class="map-and-form">
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3354.6234811290324!2d72.12141277473268!3d21.703516164262755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395f57414289983b%3A0xf295d6b8d9e2fa2c!2sShantilal%20Shah%20Engineering%20College!5e1!3m2!1sen!2sin!4v1727971351257!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="form-container">
+          <form>
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <input type="text" name="subject" placeholder="Subject" required />
+            <textarea name="message" placeholder="Message" required></textarea>
+            <button type="submit" id="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Footer start -->
+    <footer class="footer_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 footer-col">
+            <div class="footer_contact">
+              <h4>Contact Us</h4>
+              <div class="contact_link_box">
+                <a href="#" class="text-decoration-none">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  <span> Bhavnagar </span>
+                </a>
+                <a href="#" class="text-decoration-none">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <span> Call +91 1234567890 </span>
+                </a>
+                <a href="#" class="text-decoration-none">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <span> efood@gmail.com </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 footer-col">
+            <div class="footer_detail">
+              <a
+                href="../HomePage/index.html"
+                class="footer-logo text-decoration-none"
+              >
+                E-food
+              </a>
+              <p>
+                Good food is the foundation of genuine happiness. We bring joy to your doorstep 
+                with delicious meals made with love and the freshest ingredients.
+              </p>
+              <div class="footer_social">
+                <a href="#" class="text-decoration-none">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="text-decoration-none">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="text-decoration-none">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="text-decoration-none">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="text-decoration-none">
+                  <i class="fa fa-pinterest" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 footer-col">
+            <h4>Opening Hours</h4>
+            <p>Everyday</p>
+            <p>10.00 Am -10.00 Pm</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end here -->
+ <!-- Scroll to Top Button -->
+ <button class="scroll-up-btn" id="scrollUpBtn">&#8679;</button>
+
+    <!-- Bootstrap JS and other scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome link -->
+    <script
+      src="https://kit.fontawesome.com/e7ac73f28f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // Get the button element
+      const scrollUpBtn = document.getElementById("scrollUpBtn");
+
+      // Show the button when scrolling down
+      window.onscroll = function () {
+          if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+              scrollUpBtn.classList.add("show");
+          } else {
+              scrollUpBtn.classList.remove("show");
+          }
+      };
+
+      // Scroll to top when clicking the button
+      scrollUpBtn.addEventListener("click", function () {
+          window.scrollTo({
+              top: 0,
+              behavior: "smooth"
+          });
+      });
+  </script>
+
+  </body>
+</html>

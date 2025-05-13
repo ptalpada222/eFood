@@ -1,0 +1,46 @@
+<div>
+  <!-- Page Header -->
+  <h2 class="text-2xl font-bold mb-4">📅 Table Bookings</h2>
+
+  <!-- Filters -->
+  <div class="bg-white p-4 rounded shadow mb-6">
+    <h3 class="text-lg font-semibold mb-2">🔍 Filter Bookings</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <input type="date" id="filter-date" class="p-2 border rounded w-full" />
+      <select id="filter-status" class="p-2 border rounded w-full">
+        <option value="">All Status</option>
+        <option value="reserved">Reserved</option>
+        <option value="confirmed">Confirmed</option>
+      </select>
+      <input
+        type="text"
+        id="search-booking"
+        placeholder="Search by Name, Email, Phone"
+        class="p-2 border rounded w-full"
+      />
+    </div>
+  </div>
+
+  <!-- Bookings Table -->
+  <div class="bg-white p-4 rounded shadow">
+    <h3 class="text-lg font-semibold mb-2">📋Booking List</h3>
+    <table class="w-full border-collapse">
+      <thead>
+        <tr class="bg-gray-200">
+          <th class="p-2 border">Name</th>
+          <th class="p-2 border">Date</th>
+          <th class="p-2 border">Start Time</th>
+          <th class="p-2 border">End Time</th>
+          <th class="p-2 border">Guests</th>
+          <th class="p-2 border">Status</th>
+          <th class="p-2 border">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="bookings-table">
+        <tr>
+          <td class="p-2 border text-center" colspan="6">No bookings found</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

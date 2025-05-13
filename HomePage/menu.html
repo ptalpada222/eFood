@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MENU</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CDN link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script src="../js/menu.js" defer></script>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <style>
+      .cart-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+      }
+      .cart-modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        width: 400px;
+      }
+      .cart-notification {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #28a745;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s ease;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+    }
+    
+    .cart-notification.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    
+    .cart-notification i {
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+    
+    @keyframes cartBounce {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+    
+    .cart-update {
+      animation: cartBounce 0.5s ease;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="nav-sticky">
+    <div class="main_area position-relative pb-4" style="background-color: rgb(34, 34, 34);">
+      <!-- Navbar -->
+         <nav class="navbar navbar-expand-lg container">
+           <div class="container-fluid">
+             <!-- Left-aligned Logo and Home Link -->
+             <h4 class="logo text-white me-3">E-food</h4>
+             <!-- <a class="nav-link text-white me-auto" href="#">Home</a> -->
+   
+             <!-- Right-aligned Navbar items -->
+             <button
+               class="navbar-toggler"
+               type="button"
+               data-bs-toggle="collapse"
+               data-bs-target="#navbarNav"
+               aria-controls="navbarNav"
+               aria-expanded="false"
+               aria-label="Toggle navigation"
+             >
+               <span class="navbar-toggler-icon"></span>
+             </button>
+   
+             <div class="navbar-collapse" id="navbarNav">
+               <!-- Navbar items pushed to the right -->
+               <ul class="navbar-nav ms-auto text-uppercase">
+                 <li class="nav-item">
+                   <a class="nav-link text-white" href="./index.html">Home</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link text-white" href="./About.html">About</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link text-white" href="./menu.html">Menu</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link text-white" href="./tableBooking.html"
+                     >Table Booking</a
+                   >
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link text-white" href="../HomePage/contact.html"
+                     >Contact</a
+                   >
+                 </li>
+               </ul>
+   
+               <!-- Right-side Icons and Button -->
+               <div class="d-flex align-items-center">
+                 <a href="../Login&SignUp/login.html" class="px-2 mx-1 text-white">
+                   <i class="fa-solid fa-user"></i>
+                 </a>
+                 <button class="buttons mx-4">
+                   <a href="./menu.html" class="nav-link text-white px-3 py-1"
+                     >Order Online</a
+                   >
+                 </button>
+               </div>
+             </div>
+           </div>
+         </nav>
+       </div>
+      </div>
+    </div>
+    <!-- Navar end here -->
+    <div class="bg-gray-100 font-sans">
+      <!-- Search, Filter & Cart -->
+      <!-- Search, Filter & Cart -->
+  <div class="container p-4">
+    <div class="row g-3 align-items-center justify-content-center">
+      <div class="col-12 col-md-6 col-lg-4">
+        <input
+          type="text"
+          id="searchBox"
+          placeholder="🔍 Search for dishes..."
+          class="form-control shadow-sm"
+        />
+      </div>
+      <div class="col-12 col-md-4 col-lg-3">
+        <select
+          id="filterCategory"
+          class="form-select shadow-sm"
+        >
+          <option value="all">🍽️ All Categories</option>
+          <option value="Starters">🥗 Starters</option>
+          <option value="Main Course">🍛 Main Course</option>
+          <option value="Desserts">🍰 Desserts</option>
+          <option value="Beverages">🍹 Beverages</option>
+        </select>
+      </div>
+      <div class="col-12 col-md-2 col-lg-2">
+        <button
+          id="cartButton"
+          class="btn btn-danger w-100 shadow-sm"
+        >
+          🛒 Cart (<span id="cartCount">0</span>)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu Items -->
+  <div class="container p-4">
+    <div id="menuContainer" class="row row-cols-1 row-cols-md-3 g-4"></div>
+  </div>
+  <!-- Cart Notifiaction -->
+  <div id="cartNotification" class="cart-notification">
+    <span id="cartNotificationText">Item added to cart!</span>
+  </div>
+  <!-- Cart Modal -->
+  <div id="cartModal" class="cart-modal">
+    <div class="cart-modal-content">
+      <h2 class="text-center mb-4">🛍️ Your Cart</h2>
+      <ul id="cartList" class="list-unstyled mb-4"></ul>
+      <button
+        id="closeCart"
+        class="btn btn-danger w-100"
+      >
+        Close
+      </button>
+      <button
+        id="orderNowBtn"
+        class="btn btn-success w-100 mt-2"
+      >
+        Order Now
+      </button>
+      <!-- Checkout Modal -->
+<div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="checkoutModalLabel">Checkout</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="checkoutForm">
+          <!-- Shipping Address -->
+          <div class="mb-3">
+            <label for="address" class="form-label">Shipping Address</label>
+            <textarea id="shippingAddress" class="form-control" rows="3" placeholder="Enter your address"></textarea>
+          </div>
+
+          <!-- Payment Method -->
+          <div class="mb-3">
+            <label class="form-label">Payment Method</label>
+            <div class="form-check">
+              <input type="radio" id="cod" name="paymentMethod" value="Cash" class="form-check-input" >
+              <label for="cod" class="form-check-label">💵 Cash on Delivery</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" id="upi" name="paymentMethod" value="UPI" class="form-check-input">
+              <label for="upi" class="form-check-label">📲 UPI</label>
+            </div>
+          </div>
+
+          <!-- Place Order Button -->
+          <button id = "confirmOrderBtn" type="submit" class="btn btn-primary w-100">✅ Confirm Order</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+    </div>
+
+    <!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center p-4">
+        <div class="text-success mb-3" style="font-size: 3rem;">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h5 class="modal-title mb-3" id="successModalTitle">Success!</h5>
+        <p id="successModalMessage">Your order has been placed successfully!</p>
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Continue</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Error Modal -->
+<div class="modal fade" id="errorModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center p-4">
+        <div class="text-danger mb-3" style="font-size: 3rem;">
+          <i class="fas fa-exclamation-circle"></i>
+        </div>
+        <h5 class="modal-title mb-3" id="errorModalTitle">Error</h5>
+        <p id="errorModalMessage">Something went wrong!</p>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Try Again</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Warning Modal -->
+<div class="modal fade" id="warningModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center p-4">
+        <div class="text-warning mb-3" style="font-size: 3rem;">
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <h5 class="modal-title mb-3" id="warningModalTitle">Warning</h5>
+        <p id="warningModalMessage">Please check your input.</p>
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Scroll to Top Button -->
+<button class="scroll-up-btn" id="scrollUpBtn">&#8679;</button>
+    <!-- footer start -->
+    
+       <footer class="footer_section">
+         <div class="container">
+           <div class="row">
+             <div class="col-md-4 footer-col">
+               <div class="footer_contact">
+                 <h4>Contact Us</h4>
+                 <div class="contact_link_box">
+                   <a href="#" class="text-decoration-none">
+                     <i class="fa fa-map-marker" aria-hidden="true"></i>
+                     <span> Bhavnagar </span>
+                   </a>
+                   <a href="#" class="text-decoration-none">
+                     <i class="fa fa-phone" aria-hidden="true"></i>
+                     <span> Call +91 1234567890 </span>
+                   </a>
+                   <a href="#" class="text-decoration-none">
+                     <i class="fa fa-envelope" aria-hidden="true"></i>
+                     <span> efood@gmail.com </span>
+                   </a>
+                 </div>
+               </div>
+             </div>
+             <div class="col-md-4 footer-col">
+               <div class="footer_detail">
+                 <a href="../HomePage/index.html" class="footer-logo text-decoration-none"> E-food </a>
+                 <p>
+                  Good food is the foundation of genuine happiness. We bring joy to your doorstep 
+                  with delicious meals made with love and the freshest ingredients.
+                 </p>
+                 <div class="footer_social">
+                   <a href="#" class="text-decoration-none">
+                     <i class="fa fa-facebook" aria-hidden="true"></i>
+                   </a>
+                   <a href="#" class="text-decoration-none">
+                     <i class="fa fa-twitter" aria-hidden="true"></i>
+                   </a>
+                   <a href="#" class="text-decoration-none">
+                     <i class="fa fa-linkedin" aria-hidden="true"></i>
+                   </a>
+                   <a href="#" class="text-decoration-none">
+                     <i class="fa fa-instagram" aria-hidden="true"></i>
+                   </a>
+                   <a href="#" class="text-decoration-none">
+                     <i class="fa fa-pinterest" aria-hidden="true"></i>
+                   </a>
+                 </div>
+               </div>
+             </div>
+             <div class="col-md-4 footer-col">
+               <h4>Opening Hours</h4>
+               <p>Everyday</p>
+               <p>10.00 Am -10.00 Pm</p>
+             </div>
+           </div>
+         </div>
+       </footer>
+     
+    <!-- Bootstrap JS and other scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome link -->
+    <script
+      src="https://kit.fontawesome.com/e7ac73f28f.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
