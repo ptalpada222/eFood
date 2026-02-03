@@ -1,16 +1,13 @@
-import React from 'react'
-import Home from './pages/Home'
-import Signup from './pages/Signup'
+import React from "react";
 
 function App() {
   return (
     <>
-    <div className=''>
-  <Home/>
-  <Signup/>
-    </div>
+      <div className="">
+      
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

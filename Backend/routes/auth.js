@@ -21,7 +21,7 @@ router.get(
   passport.authenticate('google', { failureRedirect: './login' }),
   (req, res) => {
     // Successful authentication, redirect to your desired route
-    res.redirect('https://www.youtube.com/');
+    res.redirect('http://127.0.0.1:3000/HomePage/index.html');
   }
 );
 
