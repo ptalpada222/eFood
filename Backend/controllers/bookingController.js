@@ -3,7 +3,7 @@ const Booking = require("../models/Booking");
 const TOTAL_TABLES = 8;
 const MAX_PEOPLE_PER_TABLE = 5;
 const OPEN_TIME = "09:00"; // 9:00 AM
-const CLOSE_TIME = "23:59"; // 12:00 AM (midnight)
+const CLOSE_TIME = "23:59"; // 12:00
 
 // Utility function to check time validity
 const isTimeValid = (startTime, endTime) => {

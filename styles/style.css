@@ -154,12 +154,19 @@ a i:active {
 /* service section styling */
 .service-item {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
 }
 /* Below styling more needed add js for transition */
 
+.service-item i{
+  color:#ffd421;
+}
 .service-item:hover {
-  background-color: rgba(0, 0, 0, 0.681);
+  background-color: rgba(0, 0, 0, 0.763);
   color: white;
+}
+.service-item:hover i{
+  color:white;
 }
 
 /* Offer section Styling*/
