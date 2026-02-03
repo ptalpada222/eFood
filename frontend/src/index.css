@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+:root {
+  --primary: 15 23 42;
+}
+
+.dancing-script {
+  font-family: 'Dancing Script', cursive;
+}
