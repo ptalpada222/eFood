@@ -1,6 +1,7 @@
 import React from "react";
 import {
   Star,
+  IndianRupee,
   Award,
   Clock,
   MapPin,
@@ -11,7 +12,7 @@ import {
   Calendar,
   Phone,
   Mail,
-  Utensils 
+  Utensils,
 } from "lucide-react";
 
 const AboutPage = () => {
@@ -23,7 +24,7 @@ const AboutPage = () => {
         "Carnaroli rice with seasonal black truffle, aged Parmigiano, and white wine reduction",
       image:
         "https://images.unsplash.com/photo-1476124369491-e7addf5db371?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      price: "$34",
+      price: "34",
       rating: 4.9,
       tags: ["Seasonal", "Signature"],
     },
@@ -34,7 +35,7 @@ const AboutPage = () => {
         "New Zealand lamb with rosemary crust, mint jus, and roasted root vegetables",
       image:
         "https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      price: "$42",
+      price: "42",
       rating: 4.8,
       tags: ["Premium", "Chef's Special"],
     },
@@ -45,7 +46,7 @@ const AboutPage = () => {
         "Dark chocolate sphere with caramelized hazelnuts and gold leaf decoration",
       image:
         "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      price: "$18",
+      price: "18",
       rating: 5.0,
       tags: ["Artisan", "Award-winning"],
     },
@@ -75,7 +76,7 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100">
+    <div className="min-h-screen bg-gray-900 text-gray-100 font-efood">
       {/* Hero Section with Background Image */}
       <div className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Background Image with Overlay */}
@@ -264,8 +265,9 @@ const AboutPage = () => {
                     alt={dish.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute top-4 right-4 bg-yellow-500 text-gray-900 font-bold px-4 py-2 rounded-full">
-                    {dish.price}
+                  <div className="absolute top-4 right-4 bg-yellow-500 text-black font-bold px-3 py-2 rounded-full">
+                   <IndianRupee className="w-4 h-4 inline-block" />
+                  {dish.price}
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900 to-transparent p-4">
                     <div className="flex items-center gap-1">
