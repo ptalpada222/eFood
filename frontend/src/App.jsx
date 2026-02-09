@@ -6,17 +6,20 @@ import HeroSlider from "./Components/Hero.jsx";
 import Services from "./Components/Services.jsx";
 import Testimonial from "./Components/Testimonial.jsx";
 import TeamSection from "./Components/TeamSection.jsx";
+import HeroSectionSpinner from "./Components/HeroSectionSpinner.jsx";
+import ContactUs from "./Components/ContactUs.jsx";
 
 function App() {
   return (
     <>
       <div className="">
         <Navbar />
-        <HeroSlider/>
+        {/* <HeroSlider/>
         <Services/>
-        <About />
+        <HeroSectionSpinner />
         <TeamSection />
-        <Testimonial />
+        <Testimonial /> */}
+        <ContactUs />
         <Footer />
       </div>
     </>
